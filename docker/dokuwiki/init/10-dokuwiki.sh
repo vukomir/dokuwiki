@@ -4,11 +4,11 @@ set -e
 
 # Volumes Init
 #
-if [ ! -f /var/www/html/data/index.php ]; then
+if [ ! -f /var/www/html/data/deleted.files ]; then
   echo "Init data folder"
   cp -R /opt/src/dokuwiki/data/* /var/www/html/data/
   cp -R /opt/src/dokuwiki/data/.htaccess /var/www/html/data/
-  chown -R www-data /var/www/html
+  chown -R www-data /var/www/html/data
 fi
 
 if [ ! -f /var/www/html/conf/.htaccess ]; then
